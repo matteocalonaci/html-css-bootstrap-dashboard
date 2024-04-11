@@ -81,12 +81,11 @@ a {
 
 /* MAIN */
 
-.img {
+.img-fluid {
     width: 2rem;
-    height: 2rem;
-    background-image: url(../IMG/class-avatar.jpg);
-    background-size: cover;
-    display: inline-block;
+    height: auto;
+
+
 }
 
 
