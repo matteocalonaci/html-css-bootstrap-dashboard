@@ -1,76 +1,67 @@
-body {
-    height: 100vh;
-    width: 100%;
-}
-
-
 .main-container {
     display: flex;
 }
 
 
 
-header {
+.header {
     width: 100%;
-    background-color: red;
+    height: 4rem;
 }
 
 .sidebar {
-    width: 12rem;
-    background-color: blue;
+    background-color: rgb(14, 38, 60);
     background-image: url(../IMG/sidebar-bg.png);
+    height: calc(100vh - 4rem);
 
 }
 
 .main {
     width: calc(100% - 3rem);
-    height: calc(100vh - 3rem);
+    height: calc(100vh - 4rem);
     overflow-y: scroll;
 }
 
 
 /* HEADER */
 
-.navbar {
-    width: 100%;
+.header-container {
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3rem;
+}
+
+.header-container .col-2,
+.col-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container .col-3 {
+    display: flex;
+    justify-content: center;
 
 }
 
-.navbar>.container-fluid {
-    width: 100%;
+.header-container .col-3 a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.form-control {
-    padding: 0 1rem;
-}
-
-.icon {
-    display: flex;
-}
-
-.icon a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon a ul {
-    display: flex;
-    margin-bottom: 0;
+    color: #212121;
 
 }
 
 
+.logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../IMG/mobile-logo.png);
+    background-size: cover;
+}
 
-.icon a ul li {
-    padding: 0 1rem;
+a {
     list-style: none;
     text-decoration: none;
 }
@@ -80,6 +71,10 @@ header {
 
     border-radius: 100%;
     background-color: #212121;
+}
+
+.black {
+    background-color: rgba(0, 0, 0, 0.117);
 }
 
 /* HEADER END */
@@ -117,4 +112,12 @@ header {
 .sidebar a ul li i span {
     text-decoration: none;
     list-style: none;
+}
+
+.sd-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }

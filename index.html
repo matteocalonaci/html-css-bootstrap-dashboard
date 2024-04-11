@@ -4,53 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
-    ">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
-    ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Bootstrap-dashboard</title>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-light bg-light d-flex align-items-centre d-flex w-100">
-            <div class="container-fluid d-flex w-100">
-                <div class="logo d-flex align-items-centre">
-                    <img src="./IMG/logo.svg" alt="">
+<body class="vh-100 w-100">
+    <header class="header w-100">
+
+        <div class="header-container">
+            <div class="row  w-100">
+
+
+                <div class="col-2">
+                    <div class="logo d-md-block d-lg-none "></div>
+                    <div class="logo-desktop d-none d-lg-block d-xl-block">
+                        <img src="./IMG/logo.svg" alt="">
+                    </div>
                 </div>
 
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                </form>
 
-                <div class="icon">
-                    <a class="" href="#">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-list-ul"></i>
-                            </li>
-                            <li>
+                <div class="col-7">
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1"><i
+                                class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control black" placeholder="Prova a cercare: Lezioni di laravel"
+                            aria-label="Prova" aria-describedby="basic-addon1">
+                    </div>
+                </div>
 
-                                <i class="fa-solid fa-question text-white p-1"></i>
 
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-bell text-warning"></i>
-                            </li>
-                        </ul>
+                <div class="col-3 ">
+
+                    <a class="w-100" href="#">
+
+                        <span class="d-none d-lg-block d-xl-block">
+                            <i class="fa-solid fa-list-ul"></i>
+                        </span>
+                        <span class="d-none d-lg-block d-xl-block">
+
+                            <i class="fa-solid fa-question text-white p-1"></i>
+
+                        </span>
+                        <span class="d-none d-lg-block d-xl-block">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </span>
+                        <span>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-bell text-warning"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </span>
+
                     </a>
 
+
+
                 </div>
+            </div>
+        </div>
 
-
-
-
-        </nav>
     </header>
 
 
@@ -58,34 +84,52 @@
 
         <!--SIDEBAR-->
 
-        <div class="sidebar">
-            <div class="container d-flex flex-column h-100 w-100">
-                <div class="row w-100 h-100 pt-4">
-                    <a class="d-flex align-items-start justify-content-center" href="">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-house pt-4 me-2 text-white"></i><span
-                                    class="text-white">Home</span>
-                            </li>
-                            <li><i class="fa-solid fa-chart-simple pt-4 me-2 text-white"></i><span
-                                    class="text-white">Stats</span></li>
-                            <li><i class="fa-solid fa-signal pt-4 me-2 text-white"></i><span
-                                    class="text-white">Signals</span></li>
-                        </ul>
-                    </a>
-                </div>
-                <div class="row w-100 pb-4">
-                    <a href="">
-                        <ul>
-                            <li> <i class="fa-solid fa-gear me-2 text-white"></i>
-                                <span class="text-white">Admin</span>
-                            </li>
-                        </ul>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div class="sidebar d-flex">
+            <div class="container d-flex flex-column justify-content-between">
+                <div class="col-12 d-flex">
 
+
+                    <div class="col-12">
+                        <a class="d-flex w-100" href="">
+                            <ul class="w-100 d-flex justify-content-start p-4">
+                                <li class="w-100 d-flex py-4">
+                                    <div class="sd-icon"><i class="fa-solid fa-house  text-white"></i></div>
+                                    <span class="text-white ms-2 d-none d-sm-block">Home</span>
+                                </li>
+                                <li class="w-100 d-flex pb-4">
+                                    <div class="sd-icon"><i class="fa-solid fa-chart-simple text-white"></i></div>
+                                    <span class="text-white ms-2 d-none d-sm-block">Stats</span>
+                                </li>
+                                <li class="w-100 d-flex pb-4">
+                                    <div class="sd-icon"> <i class="fa-solid fa-signal text-white"></i></div>
+                                    <span class="text-white ms-2 d-none d-sm-block">Signals</span>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-12 d-flex w-100">
+
+
+                    <div class="col-12">
+                        <ul class="w-100 d-flex justify-content-start px-4 py-2">
+
+                            <li class="w-100 d-flex pb-1">
+                                <div class="sd-icon"><i class="fa-solid fa-gear text-white"></i></div>
+                                <span class="text-white ms-2 d-none d-sm-block">Admin</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
         <!-- FINE SIDEBAR -->
 
         <!-- MAIN -->
@@ -93,10 +137,11 @@
 
         <main class="main">
             <!-- START Boolean badges etc -->
-            <div class="col-12 d-flex">
-                <div class="col-5  d-flex justify-content-start align-items-center p-2 bg-primary">
+            <div class="col-12 d-flex flex-column flex-md-row">
+                <div
+                    class="col-12 order-2 order-md-0 col-md-5 d-flex justify-content-start align-items-center p-2 bg-primary">
                     <div class="row">
-                        <div class="col-12 w-100">
+                        <div class="col-12">
                             <span class="fs-2 text-white">Boolean</span>
                             <span class="badge rounded-pill text-bg-dark">Piano blaze</span>
                             <br>
@@ -109,7 +154,8 @@
                     </div>
                 </div>
 
-                <div class="col-4 d-flex justify-content-center align-items-center p-2 bg-primary">
+                <div
+                    class="col-12 order-2 order-md-1 col-md-4 d-flex justify-content-center align-items-center p-2 bg-primary">
                     <div class="row w-100">
 
                         <div class="col-12 mt-3">
@@ -120,12 +166,84 @@
                 </div>
 
 
-                <div class="col-3 d-flex justify-content-center align-items-start bg-primary">
-                    <div class="row">
-                        <div class="col-12 mt-4">
+                <div class="col-12 order-1 col-lg-3 d-flex justify-content-start align-items-start bg-primary">
+                    <div class="row p-2">
+                        <div class="col-12 mt-2">
                             <span class="text-white pe-2">Nuovo Studente</span>
-                            <button type="button" class="btn btn-outline-light"><i
+                            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
                                     class="fa-solid fa-plus"></i></button>
+
+                            <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight"
+                                aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body text-bg-white">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="First name"
+                                                aria-label="First name">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Last name"
+                                                aria-label="Last name">
+                                        </div>
+
+                                        <form class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="inputEmail4" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="inputEmail4">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="inputPassword4" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="inputPassword4">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="inputAddress" class="form-label">Address</label>
+                                                <input type="text" class="form-control" id="inputAddress"
+                                                    placeholder="1234 Main St">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="inputCity" class="form-label">City</label>
+                                                <input type="text" class="form-control" id="inputCity">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="inputState" class="form-label">State</label>
+                                                <select id="inputState" class="form-select">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="inputZip" class="form-label">Zip</label>
+                                                <input type="text" class="form-control" id="inputZip">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Default file input
+                                                    example</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label" for="gridCheck">
+                                                        Check me out
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -138,12 +256,12 @@
 
 
             <!-- START  Layout 2 Colonne -->
-            <div class="col-12 d-flex">
+            <div class="col-12 d-flex flex-column flex-md-row">
 
 
 
                 <!-- START big col -->
-                <div class="col-8 bg-warning">
+                <div class="col-12 col-md-8 bg-warning">
                     <div class="container">
 
                         <!-- START prossime classi -->
@@ -152,7 +270,7 @@
                                 <div class="card-header">
                                     <span class="fs-2">Prossime classi</span>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 w-100">
                                     <table class="table">
                                         <thead>
                                             <tr>
@@ -352,14 +470,8 @@
                                         <div id="collapseThree" class="accordion-collapse collapse"
                                             data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                <strong>This is the third item's accordion body.</strong> It is hidden
-                                                by default, until the collapse plugin adds the appropriate classes that
-                                                we use to style each element. These classes control the overall
-                                                appearance, as well as the showing and hiding via CSS transitions. You
-                                                can modify any of this with custom CSS or overriding our default
-                                                variables. It's also worth noting that just about any HTML can go within
-                                                the <code>.accordion-body</code>, though the transition does limit
-                                                overflow.
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni aut
+                                                labore eos officiis, animi suscipit.
                                             </div>
                                         </div>
                                     </div>
@@ -380,7 +492,7 @@
 
 
                 <!-- START sml col -->
-                <div class="col-4 bg-info">
+                <div class="col-12 col-md-4 bg-info">
                     <div class="container">
 
                         <!-- START Todo UP -->
