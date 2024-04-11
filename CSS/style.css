@@ -14,6 +14,7 @@
     background-image: url(../IMG/sidebar-bg.png);
     height: calc(100vh - 4rem);
 
+
 }
 
 .main {
@@ -119,4 +120,24 @@ a {
     align-items: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+
+@media screen and (max-width:700px) {
+    .img-fluid {
+        width: 2rem;
+        height: auto;
+    }
+
+    .sidebar {
+
+        width: 3rem;
+    }
+
+    .row .align {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
