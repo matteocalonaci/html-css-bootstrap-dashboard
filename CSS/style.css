@@ -57,9 +57,11 @@
 
 .logo {
     width: 2.5rem;
-    height: 2.5rem;
-    background-image: url(../IMG/mobile-logo.png);
     background-size: cover;
+}
+
+.img-fluid-logo {
+    width: 2.5rem;
 }
 
 a {
@@ -67,12 +69,18 @@ a {
     text-decoration: none;
 }
 
-
-.fa-question {
-
-    border-radius: 100%;
+.question {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color: #212121;
+    border-radius: 100%;
 }
+
 
 .black {
     background-color: rgba(0, 0, 0, 0.117);
@@ -89,6 +97,9 @@ a {
 
 }
 
+.my-bg {
+    background-color: rgb(248, 249, 250);
+}
 
 
 
